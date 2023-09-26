@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 0.68vw;
+}
+
+body {
+  width: auto;
+  font-family: "Notable", sans-serif;
+}
+
+p {
+  font-family: "Indie Flower", cursive;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+/* SCROLL TEXT SET-UP */
+
+.scroll {
+  display: flex;
+  column-gap: 10rem;
+}
+
+.bottom {
+  position: absolute;
+  margin-top: 50vh;
+  right: 0;
+}
+
+h1 {
+  font-size: 14rem;
+  color: #5b1059;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 aliceblue, 1px -1px 0 aliceblue, -1px 1px 0 aliceblue,
+    1px 1px 0 aliceblue;
+
+  transition: 0.6s;
+}
+
+.bottom h1 {
+  text-transform: uppercase;
+  font-size: 14rem;
+  color: #4b0c53;
+  text-shadow: -1px -1px 0 aliceblue, 1px -1px 0 aliceblue, -1px 1px 0 aliceblue,
+    1px 1px 0 aliceblue;
+
+  transition: 0.6s;
+}
+
+h1:hover,
+.bottom h1:hover {
+  text-transform: uppercase;
+  font-size: 14rem;
+  color: aliceblue;
+}
+
+/* LAYOUT SET-UP */
+
+.container {
+  overflow: hidden;
+  height: 400rem;
+  background: linear-gradient(#600f5d, #2e0846, #0e155b, #343c90);
+  position: relative;
+}
+
+/* PACHI SET-UP */
+
+.fixed {
+  position: fixed;
+}
+
+.pachi {
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 30%;
+  height: auto;
+}
+
+.bubble {
+  /* display: none; */
+
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 20%;
+  text-align: center;
+}
+
+.pachi:hover + .bubble {
+  /* display: block; */
+
+  left: 68%;
+  top: 45%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.6s;
+
+  height: auto;
+}
+
+.bubble_image {
+  position: relative;
+}
+
+.bubble_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+/* CLOUDS */
+
+.cloud {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: transform 1s;
+
+  height: auto;
+}
+
+.cloud:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  /* transition: 1s; */
+}
+
+.cloud:visited {
+  transform: translate(-50%, -50%) scale(1);
+  /* transition: 1s; */
+}
+
+.first {
+  width: 50%;
+  top: 25%;
+  left: 5%;
+}
+.second {
+  width: 30%;
+  top: 28%;
+  left: 25%;
+}
+.third {
+  width: 55%;
+  top: 38%;
+  left: 90%;
+}
+.fourth {
+  width: 35%;
+  top: 49%;
+  left: 65%;
+}
+.fifth {
+  width: 50%;
+  top: 58%;
+  left: 10%;
+  pointer-events: none;
+}
+.sixth {
+  width: 60%;
+  top: 68%;
+  left: 100%;
+}
+.seventh {
+  width: 50%;
+  top: 82%;
+  left: 27%;
+}
+.eighth {
+  width: 30%;
+  top: 85%;
+  left: 5%;
+}
+.ninth {
+  width: 50%;
+  top: 95%;
+  left: 85%;
+  pointer-events: none;
+}
+
+/* HIDDEN DUDES SET-UP */
+
+.dude {
+  position: absolute;
+  transition: 0.4s;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.pinkie {
+  top: 58%;
+  left: 13%;
+  width: 10%;
+}
+
+.dude:hover {
+  transform: translate(-50%, -100%) scale(1.5);
+}
+
+.orangie {
+  top: 95%;
+  left: 85%;
+  width: 10%;
+}
+
+.final_text {
+  position: absolute;
+  bottom: 3rem;
+  left: 4rem;
+
+  color: rgb(173, 214, 249);
+  font-size: 2rem;
+  width: 60rem;
+}
+
+.final_text > * {
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+
+  .pachi {
+    width: 50vw;
+    height: auto;
+  }
+
+  .bubble {
+    width: 25%;
+    left: 65%;
+    top: 50%;
+  }
+
+  .pachi:hover + .bubble {
+    /* display: block; */
+
+    left: 75%;
+    top: 45%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.6s;
+
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 45%;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .pachi {
+    width: 70vw;
+    height: auto;
+    top: 45%;
+  }
+
+  .bubble {
+    width: 40%;
+    left: 65%;
+    top: 55%;
+  }
+
+  .pachi:hover + .bubble {
+    /* display: block; */
+
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.6s;
+
+    height: auto;
+  }
+
+  .final_text {
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+    bottom: 3rem;
+    left: 50%;
+  }
+}
