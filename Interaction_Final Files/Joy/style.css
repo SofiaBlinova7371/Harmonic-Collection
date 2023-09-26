@@ -25,14 +25,19 @@ p {
   column-gap: 10rem;
 }
 
+.top {
+  margin-top: -2rem;
+}
+
 .bottom {
   position: absolute;
   margin-top: 50vh;
   right: 0;
+  /* padding-right: 5rem; */
 }
 
 h1 {
-  font-size: 14rem;
+  font-size: 16rem;
   color: #5b1059;
   text-transform: uppercase;
   text-shadow: -1px -1px 0 aliceblue, 1px -1px 0 aliceblue, -1px 1px 0 aliceblue,
@@ -42,19 +47,14 @@ h1 {
 }
 
 .bottom h1 {
-  text-transform: uppercase;
-  font-size: 14rem;
   color: #4b0c53;
-  text-shadow: -1px -1px 0 aliceblue, 1px -1px 0 aliceblue, -1px 1px 0 aliceblue,
-    1px 1px 0 aliceblue;
-
-  transition: 0.6s;
 }
 
 h1:hover,
-.bottom h1:hover {
+.bottom h1:hover,
+h1:active,
+.bottom h1:active {
   text-transform: uppercase;
-  font-size: 14rem;
   color: aliceblue;
 }
 
@@ -93,7 +93,8 @@ h1:hover,
   text-align: center;
 }
 
-.pachi:hover + .bubble {
+.pachi:hover + .bubble,
+.pachi:active + .bubble {
   /* display: block; */
 
   left: 68%;
@@ -126,7 +127,8 @@ h1:hover,
   height: auto;
 }
 
-.cloud:hover {
+.cloud:hover,
+.cloud:active {
   transform: translate(-50%, -50%) scale(1.1);
   /* transition: 1s; */
 }
@@ -198,7 +200,8 @@ h1:hover,
   width: 10%;
 }
 
-.dude:hover {
+.dude:hover,
+.dude:active {
   transform: translate(-50%, -100%) scale(1.5);
 }
 
@@ -227,22 +230,34 @@ h1:hover,
     font-size: 55%;
   }
 
+  h1 {
+    font-size: 12rem;
+  }
+
+  .scroll {
+    margin-top: 5rem;
+  }
+
+  .bottom {
+    margin-top: 45vh;
+  }
+
   .pachi {
     width: 50vw;
     height: auto;
+    top: 40vh;
   }
 
   .bubble {
     width: 25%;
     left: 65%;
-    top: 50%;
+    top: 45%;
   }
 
-  .pachi:hover + .bubble {
-    /* display: block; */
-
+  .pachi:hover + .bubble,
+  .pachi:active + .bubble {
     left: 75%;
-    top: 45%;
+    top: 40%;
     transform: translate(-50%, -50%) scale(1);
     transition: 0.6s;
 
@@ -255,8 +270,20 @@ h1:hover,
     font-size: 45%;
   }
 
+  h1 {
+    font-size: 6rem;
+  }
+
   p {
     font-size: 1.5rem;
+  }
+
+  .scroll {
+    column-gap: 4rem;
+  }
+
+  .bottom {
+    margin-top: 55vh;
   }
 
   .pachi {
@@ -271,7 +298,8 @@ h1:hover,
     top: 55%;
   }
 
-  .pachi:hover + .bubble {
+  .pachi:hover + .bubble,
+  .pachi:active + .bubble {
     /* display: block; */
 
     left: 80%;
