@@ -80,8 +80,6 @@ body {
   max-width: 100rem;
   margin: 10rem auto;
   padding: 6rem 3rem;
-  /* background-color: rgb(233, 229, 223); */
-  /* background-image: url(Images/paper.webp); */
   background-image: url(Images/paper2.jpeg);
 
   box-shadow: 0 0 0.2rem #00000027;
